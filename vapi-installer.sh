@@ -6,8 +6,9 @@ sudo docker stack rm vapi
 sleep 20
 sudo docker system prune -f
 sleep 20
-sudo docker system prune -f
+sudo docker volume prune -f
 cd vapi
+sleep 10
 sudo docker stack deploy -c docker-compose-swarm.yml vapi
 sleep 20
 sudo docker ps
